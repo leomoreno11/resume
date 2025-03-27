@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Rodrigues - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: background 0.3s;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        .section {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .dark-mode {
+            background-color: #222;
+            color: #ddd;
+        }
+        .dark-mode .container {
+            background: #333;
+            color: #ddd;
+        }
+        .dark-mode h1, .dark-mode h2, .dark-mode h3 {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="name">Leonardo Rodrigues</h1>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lmorenogr/">lmorenogr</a></p>
+        <p><strong>Email:</strong> lmorenogr@gmail.com</p>
+        <p><strong>Phone:</strong> +55 11 97773-3418</p>
+
+        <button class="button" onclick="toggleDarkMode()">Dark Mode</button>
+        <button class="button" onclick="toggleLanguage()" id="langButton">Mudar para Português</button>
+
+        <div class="section" id="skills-section">
+            <h2>Skills</h2>
+            <p id="skills-text">Python | Scala | Rust | Golang / Go | Shell Script | SQL | MSSQL Server | Hadoop Ecosystem | Hive | Git</p>
+            <p id="skills-text2">Databricks | Azure | Cloud Computing | CI/CD | Unit Testing | OOP | Spark / PySpark | Linux | ETL / ELT | Big Data | Data Analysis</p>
+            <p id="skills-text3">English, Portuguese – All professional proficiency or above</p>
+        </div>
+
+        <div class="section" id="experience-section">
+            <h2>Experience</h2>
+            <p><strong id="exp1-title">Senior Data Engineer - Keyrus @ Pluxee</strong></p>
+            <p id="exp1-text">Engaged in the migration of large-scale processes from AWS to Azure, ensuring seamless operations of dashboards and data pipelines.</p>
+            <p id="exp1-text2">Developed and managed advanced data algorithms utilizing PySpark, Scala, and Shell / Bash.</p>
+            <p id="exp1-text3">Documented project workflows, architecture, and specifications for cross-team alignment.</p>
+            
+            <p><strong id="exp2-title">Senior Data Engineer - Keyrus @ Visa Inc.</strong></p>
+            <p id="exp2-text">Collaborated with international teams to develop large-scale data pipelines using PySpark.</p>
+            <p id="exp2-text2">Played a key role in CI/CD integration, code reviews, and load/stress testing within Visa’s framework.</p>
+            <p id="exp2-text3">Leveraged SQL for data manipulation and performed data analysis for business insights.</p>
+            
+            <p><strong id="exp3-title">Senior Data Engineer - Black Raven</strong></p>
+            <p id="exp3-text">Founder of Black Raven, providing scalable and efficient data solutions with a focus on performance and security.</p>
+            <p id="exp3-text2">Expertise in data architecture, system integration, and process optimization using Hadoop, Spark, Scala, Azure, and Python.</p>
+            
+            <p><strong id="exp4-title">Senior Data Engineer - Santander</strong></p>
+            <p id="exp4-text">Designed and maintained high risk ETL/ELT pipelines for enterprise applications using Azure, Python, Spark, and SQL Server.</p>
+            <p id="exp4-text2">Promoted from Mid-level to Senior, taking on leadership responsibilities and guiding project improvements.</p>
+        </div>
+
+        <div class="section" id="education-section">
+            <h2>Education</h2>
+            <p><strong id="edu1-title">Bachelor of Data Science</strong> - Anhembi Morumbi University (01/2020 - 12/2023)</p>
+            <p><strong id="edu2-title">Advanced English Course</strong> - Wizard by Pearson (2016 - 2019)</p>
+        </div>
+
+        <a href="resume.pdf" class="button" download>Download Resume (PDF)</a>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        function toggleLanguage() {
+            let langButton = document.getElementById("langButton");
+            let isEnglish = langButton.innerText.includes("Português");
+
+            if (isEnglish) {
+                langButton.innerText = "Switch to English";
+                document.getElementById("skills-section").querySelector("h2").innerText = "Habilidades";
+                document.getElementById("experience-section").querySelector("h2").innerText = "Experiência";
+                document.getElementById("education-section").querySelector("h2").innerText = "Educação";
+                
+                document.getElementById("exp1-title").innerText = "Engenheiro de Dados Sênior - Keyrus @ Pluxee";
+                document.getElementById("exp1-text").innerText = "Envolvido na migração de processos de larga escala da AWS para o Azure, garantindo operações perfeitas de painéis e pipelines de dados.";
+                document.getElementById("exp1-text2").innerText = "Desenvolveu e gerenciou algoritmos de dados avançados utilizando PySpark, Scala e Shell/Bash.";
+                document.getElementById("exp1-text3").innerText = "Documentou fluxos de trabalho de projeto, arquitetura e especificações para alinhamento entre equipes.";
+
+                document.getElementById("exp2-title").innerText = "Engenheiro de Dados Sênior - Keyrus @ Visa Inc.";
+                document.getElementById("exp2-text").innerText = "Colaborou com equipes internacionais para desenvolver pipelines de dados em larga escala usando PySpark.";
+                document.getElementById("exp2-text2").innerText = "Desempenhou um papel fundamental na integração de CI/CD, revisões de código e testes de carga/estresse dentro da estrutura da Visa.";
+                document.getElementById("exp2-text3").innerText = "Alavancou SQL para manipulação de dados e realizou análise de dados para insights de negócios.";
+
+                document.getElementById("exp3-title").innerText = "Engenheiro de Dados Sênior - Black Raven";
+                document.getElementById("exp3-text").innerText = "Fundador da Black Raven, fornecendo soluções de dados escaláveis ​​e eficientes com foco em desempenho e segurança.";
+                document.getElementById("exp3-text2").innerText = "Expertise em arquitetura de dados, integração de sistemas e otimização de processos usando Hadoop, Spark, Scala, Azure e Python.";
+
+                document.getElementById("exp4-title").innerText = "Engenheiro de Dados Sênior - Santander";
+                document.getElementById("exp4-text").innerText = "Projetei e mantive pipelines ETL/ELT para aplicativos empresariais de alto risco usando Azure, Python, Spark e SQL Server.";
+                document.getElementById("exp4-text2").innerText = "Promovido de nível pleno para sênior, assumindo responsabilidades de liderança e orientando melhorias de projeto.";
+                
+            } else {
+                langButton.innerText = "Mudar para Português";
+                document.getElementById("skills-section").querySelector("h2").innerText = "Skills";
+                document.getElementById("experience-section").querySelector("h2").innerText = "Experience";
+                document.getElementById("education-section").querySelector("h2").innerText = "Education";
+                
+                document.getElementById("exp1-title").innerText = "Senior Data Engineer - Keyrus @ Pluxee";
+                document.getElementById("exp1-text").innerText = "Engaged in the migration of large-scale processes from AWS to Azure, ensuring seamless operations of dashboards and data pipelines.";
+                document.getElementById("exp1-text2").innerText = "Developed and managed advanced data algorithms utilizing PySpark, Scala, and Shell / Bash.";
+                document.getElementById("exp1-text3").innerText = "Documented project workflows, architecture, and specifications for cross-team alignment.";
+
+                document.getElementById("exp2-title").innerText = "Senior Data Engineer - Keyrus @ Visa Inc.";
+                document.getElementById("exp2-text").innerText = "Collaborated with international teams to develop large-scale data pipelines using PySpark.";
+                document.getElementById("exp2-text2").innerText = "Played a key role in CI/CD integration, code reviews, and load/stress testing within Visa’s framework.";
+                document.getElementById("exp2-text3").innerText = "Leveraged SQL for data manipulation and performed data analysis for business insights.";
+
+                document.getElementById("exp3-title").innerText = "Senior Data Engineer - Black Raven";
+                document.getElementById("exp3-text").innerText = "Founder of Black Raven, providing scalable and efficient data solutions with a focus on performance and security.";
+                document.getElementById("exp3-text2").innerText = "Expertise in data architecture, system integration, and process optimization using Hadoop, Spark, Scala, Azure, and Python.";
+
+                document.getElementById("exp4-title").innerText = "Senior Data Engineer - Santander";
+                document.getElementById("exp4-text").innerText = "Designed and maintained high risk ETL/ELT pipelines for enterprise applications using Azure, Python, Spark, and SQL Server.";
+                document.getElementById("exp4-text2").innerText = "Promoted from Mid-level to Senior, taking on leadership responsibilities and guiding project improvements.";
+            }
+        }
+    </script>
+</body>
+</html>
